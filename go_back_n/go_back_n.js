@@ -74,10 +74,10 @@ function receiver(packet, callback) {
   setTimeout(() => {
     const rand = Math.random();
 
-    if (rand < 0.6) {
+    if (rand < 0.4) {
       packet.status = "ACK";
       console.log(`Packet ${packet.id} received successfully!`);
-    } else if (rand < 0.8) {
+    } else if (rand < 0.2) {
       packet.status = "DELAY";
       console.log(`Packet ${packet.id} got delayed. Retransmit requested.`);
     } else {
